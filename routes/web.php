@@ -13,5 +13,14 @@ use App\Models\Listing;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// All listings
 Route::get('/', [ListingController::class, 'index']);
+
+// Create Listing
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// Store listings 
+Route::post('/listings/store', [ListingController::class, 'store']);
+
+// Single listings
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
