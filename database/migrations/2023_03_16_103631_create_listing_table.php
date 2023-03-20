@@ -22,6 +22,7 @@ class CreateListingTable extends Migration
             $table->string('email');
             $table->string('website');
             $table->longText('description');
+            $table->string('logo')->nullable(); // nullable means you can add the file or not
             $table->timestamps();
         });
     }

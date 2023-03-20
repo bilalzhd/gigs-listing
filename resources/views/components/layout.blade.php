@@ -61,5 +61,7 @@
         >Post Job</a
     >
 </footer>
+<script src="//unpkg.com/alpinejs" defer></script>
+<x-alert />
 </body>
 </html>
