@@ -14,6 +14,9 @@ use App\Models\Listing;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// --------LISTINGS CONTROLLERS-------- //
+
 // All listings
 Route::get('/', [ListingController::class, 'index']);
 
@@ -40,7 +43,9 @@ Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware
 // Single listings
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
-// ---------------- //
+
+
+// --------USER CONTROLLERS-------- //
 
 
 // Show registration form
