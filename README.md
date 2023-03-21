@@ -4,7 +4,7 @@ This is a simple Laravel application that allows users to create listings, view 
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/bilalzhd/laragigs.git`
+1. Clone this repository: `git clone https://github.com/bilalzhd/gigs-listing.git`
 2. Navigate to the project directory: `cd laragigs`
 3. Install dependencies: `composer install`
 4. Create a copy of the `.env.example` file: `cp .env.example .env`
