@@ -11,20 +11,20 @@ you can add fake data by using php artisan make:seeder NameOfTheSeeder
 some methods to add to a controller
 
 
-**index()** that would be used to return a view
+**index()** that would be used to return a view  
 eg.
 `use App\Models\Listing;
 public function index(){        
         return view('listings.index', ["listings" => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)]);`
  }
-**create()** that would be used to show a create view
+**create()** that would be used to show a create view  
 e.g `public function create(){return view('listings.create');}`
 
-**show()** that would be used to create a single post / data
+**show()** that would be used to create a single post / data  
 e.g `public function show(Listing $listing){
-        return view('listings.show', ["listing" => $listing]);}`
-**store()** that would be used to add something to the database
-e.g `public function store(Request $request){
+        return view('listings.show', ["listing" => $listing]);}` 
+**store()** that would be used to add something to the database  
+e.g `public function store(Request $request){ 
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required', Rule::unique('listings', 'company')],
