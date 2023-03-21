@@ -13,16 +13,16 @@ class CreateListingTable extends Migration
      */
     public function up()
     {
-        Schema::create('listing', function (Blueprint $table) {
+        Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('logo')->nullable();
             $table->string('tags');
             $table->string('company');
             $table->string('location');
             $table->string('email');
             $table->string('website');
             $table->longText('description');
-            $table->string('logo')->nullable(); // nullable means you can add the file or not
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateListingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('listing');
+        Schema::dropIfExists('listings');
     }
 }
