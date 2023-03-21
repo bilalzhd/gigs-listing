@@ -24,15 +24,15 @@ e.g `public function create(){return view('listings.create');}`
 e.g `public function show(Listing $listing){
         return view('listings.show', ["listing" => $listing]);}` 
 **store()** that would be used to add something to the database  
-e.g `public function store(Request $request){ 
-        $formFields = $request->validate([
-            'title' => 'required',
-            'company' => ['required', Rule::unique('listings', 'company')],
-            'location' => 'required',
-            'website' => 'required',
-            'email' => ['required', 'email'],
-            'tags' => 'required',
-            'description' => 'required'
-        ]);
-        Listing::create($formFields);
+e.g `public function store(Request $request){   
+        $formFields = $request->validate([  
+            'title' => 'required',  
+            'company' => ['required', Rule::unique('listings', 'company')],  
+            'location' => 'required',  
+            'website' => 'required',  
+            'email' => ['required', 'email'],  
+            'tags' => 'required',  
+            'description' => 'required'  
+        ]);   
+        Listing::create($formFields);  
         return redirect('/')->with('message', 'Listing created successfully!');}`
